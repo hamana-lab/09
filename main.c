@@ -5,17 +5,17 @@
 int main(void)
 {
   int i;
-  int sum=0;
   int grade[SIZE];
-
-  printf("%i명의 점수를 입력하세요.\n", SIZE);
+  int score[SIZE];
   
   for(i=0;i<SIZE;i++){
-   scanf("%d", &grade[i]);
-   sum = sum + grade[i];
+   grade[i] = rand() % 100;
+   score[i] = grade[i];
   }
-  
-  printf("grade average : %d\n", sum/SIZE);
+
+   
+  for(i=0;i<SIZE;i++)
+   printf("grade[%d] = %d, score[%d] = %d\n", i, grade[i], i, score[i]);
 
   system("PAUSE");	
   return 0;
