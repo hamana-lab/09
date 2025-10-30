@@ -5,17 +5,20 @@
 int main(void)
 {
   int i;
-  int grade[SIZE];
-  int score[SIZE];
+  int a[SIZE]={1,2,3,4,5};
+  int b[SIZE]={1,2,3,4,5};
+  int flage_same = 1;
+  
+  
   
   for(i=0;i<SIZE;i++){
-   grade[i] = rand() % 100;
-   score[i] = grade[i];
+                      
+  if (a[i]!=b[i]){
+   printf("index [%d] is diff. ", i);
+   flage_same = 0;
+   }
   }
-
-   
-  for(i=0;i<SIZE;i++)
-   printf("grade[%d] = %d, score[%d] = %d\n", i, grade[i], i, score[i]);
+   printf("Are a and b the same? %i\n", flage_same); 
 
   system("PAUSE");	
   return 0;
